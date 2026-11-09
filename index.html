@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Бабл-ти, кофе, матча, еда и вафли в Be My Bubble, Тольятти.">
+    <meta name="theme-color" content="#20203a">
+    <title>Be My Bubble — Тольятти</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="#top" aria-label="Be My Bubble — в начало">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>BE MY BUBBLE</span>
+        </a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="#menu">Меню</a>
+          <a href="#about">О кафе</a>
+          <a href="#photos">Атмосфера</a>
+          <a href="#visit">Как нас найти</a>
+        </nav>
+        <a class="header-link" href="https://yandex.com/maps/org/be_my_bubble/181204185075/?ll=49.275899%2C53.502926&z=17" target="_blank" rel="noopener noreferrer">Мы на карте <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="shell hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> Кофейня в Тольятти</p>
+            <h1 id="hero-title">Бабл-ти,<br>кофе <span>и матча.</span></h1>
+            <p class="hero-description">А ещё — горячие напитки, еда и вафли. Заглядывай за своим любимым вкусом.</p>
+            <div class="hero-actions">
+              <a class="button button-pink" href="#menu">Смотреть меню <span aria-hidden="true">↓</span></a>
+              <a class="button button-outline-light" href="https://yandex.com/maps/org/be_my_bubble/181204185075/?ll=49.275899%2C53.502926&z=17" target="_blank" rel="noopener noreferrer">Как добраться <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="hero-details">
+              <span>Юбилейная, 85Б</span>
+              <span class="detail-separator" aria-hidden="true"></span>
+              <span>Ежедневно · 11:00–22:00</span>
+            </div>
+            <a class="award-pill" href="https://yandex.com/maps/org/be_my_bubble/181204185075/" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">✳</span> Хорошее место 2026 · Яндекс Карты</a>
+          </div>
+
+          <div class="hero-art" aria-hidden="true">
+            <span class="orbit orbit-one"></span>
+            <span class="orbit orbit-two"></span>
+            <span class="bubble bubble-one"></span>
+            <span class="bubble bubble-two"></span>
+            <span class="bubble bubble-three"></span>
+            <span class="sparkle sparkle-one">✦</span>
+            <span class="sparkle sparkle-two">✳</span>
+            <div class="drink-cup">
+              <div class="cup-lid"></div>
+              <div class="cup-drink"></div>
+              <div class="cup-logo">B<br><small>MY</small><br>B</div>
+              <div class="cup-pearls"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="art-caption"><span>смешай</span><b>свой вкус</b></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section section-pad" id="menu" aria-labelledby="menu-title">
+        <div class="menu-backdrop" aria-hidden="true">
+          <span class="menu-backdrop-image image-cocoa"></span>
+          <span class="menu-backdrop-image image-coffee"></span>
+          <span class="menu-backdrop-image image-roast"></span>
+          <span class="menu-backdrop-shade"></span>
+        </div>
+        <div class="shell">
+          <div class="section-heading menu-heading">
+            <div>
+              <p class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Выбирай настроение</p>
+              <h2 id="menu-title">Меню</h2>
+            </div>
+            <p class="section-intro">Цены и объём указаны по карточке кафе в Яндекс Картах.</p>
+          </div>
+
+          <div class="menu-filters" role="group" aria-label="Фильтр меню">
+            <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">Всё меню</button>
+            <button type="button" class="filter-button" data-filter="hot" aria-pressed="false">Горячее</button>
+            <button type="button" class="filter-button" data-filter="drinks" aria-pressed="false">Напитки</button>
+            <button type="button" class="filter-button" data-filter="food" aria-pressed="false">Еда и десерт</button>
+            <button type="button" class="filter-button" data-filter="coffee" aria-pressed="false">Кофе</button>
+          </div>
+
+          <div class="menu-grid" id="menu-list" aria-live="polite"></div>
+          <p class="menu-note">В Telegram кафе также упоминаются вафли; отдельные позиции и цены на карте не указаны. Меню и стоимость могут меняться — уточняй их перед заказом.</p>
+          <a class="text-link" href="https://yandex.com/maps/org/be_my_bubble/181204185075/menu/" target="_blank" rel="noopener noreferrer">Источник меню — Яндекс Карты <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="about-section section-pad" id="about" aria-labelledby="about-title">
+        <div class="shell about-inner">
+          <div class="about-title-block">
+            <p class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Be My Bubble</p>
+            <h2 id="about-title">От классики<br>до <span>тапиоки.</span></h2>
+          </div>
+          <div class="about-copy">
+            <p>Кофе, бабл-ти, матча и горячие напитки — выбирай знакомое или пробуй новое. В меню также есть еда и десерты.</p>
+            <div class="taste-list" aria-label="Разделы меню">
+              <span>Кофе</span><span>Бабл-ти</span><span>Матча</span><span>Еда</span><span>Вафли</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="photos-section section-pad" id="photos" aria-labelledby="photos-title">
+        <div class="shell photo-layout">
+          <div class="photo-art" aria-hidden="true">
+            <div class="photo-tile tile-pink"><span>МАНГО<br>СТАР</span><i class="tile-bubble"></i></div>
+            <div class="photo-tile tile-blue"><span>ЧА-ЧА<br>МАТЧА</span><i class="tile-bubble"></i></div>
+            <div class="photo-tile tile-lime"><span>КОФЕЙНЫЙ<br>ВАЙБ</span><i class="tile-bubble"></i></div>
+            <span class="photo-orbit"></span>
+          </div>
+          <div class="photo-copy">
+            <p class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Цвет, вкус, настроение</p>
+            <h2 id="photos-title">Здесь будет<br><span>ещё ярче.</span></h2>
+            <p>Пока в концепте — графические образы напитков. Фотографии кафе и блюд добавим после согласования с владельцами.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="visit-section section-pad" id="visit" aria-labelledby="visit-title">
+        <div class="shell visit-inner">
+          <div class="visit-copy">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> Ждём в гости</p>
+            <h2 id="visit-title">До встречи<br>на Юбилейной.</h2>
+            <p class="visit-address">Тольятти, Юбилейная улица, 85Б</p>
+            <p class="visit-hours"><span>Каждый день</span><strong>11:00–22:00</strong></p>
+            <div class="visit-actions">
+              <a class="button button-lime" href="https://yandex.com/maps/org/be_my_bubble/181204185075/?ll=49.275899%2C53.502926&z=17" target="_blank" rel="noopener noreferrer">Построить маршрут <span aria-hidden="true">↗</span></a>
+              <a class="button button-outline-light" href="tel:+79170132226">Позвонить <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <div class="map-card">
+            <div class="map-pattern" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="map-pin" aria-hidden="true"><span>●</span></div>
+            <div class="map-label"><strong>BE MY BUBBLE</strong><span>Юбилейная, 85Б · Тольятти</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section section-pad" id="contacts" aria-labelledby="contacts-title">
+        <div class="shell contact-inner">
+          <div>
+            <p class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Остались вопросы?</p>
+            <h2 id="contacts-title">Свяжись с кафе.</h2>
+          </div>
+          <div class="contact-links">
+            <a class="contact-link" href="tel:+79170132226"><span>Позвонить</span><strong>+7 (917) 013-22-26</strong><i aria-hidden="true">↗</i></a>
+            <a class="contact-link" href="https://t.me/bemybubble" target="_blank" rel="noopener noreferrer"><span>Telegram</span><strong>Новости и меню</strong><i aria-hidden="true">↗</i></a>
+            <a class="contact-link" href="https://vk.link/bemybubble" target="_blank" rel="noopener noreferrer"><span>ВКонтакте</span><strong>Страница кафе</strong><i aria-hidden="true">↗</i></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <a class="brand brand-footer" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>BE MY BUBBLE</span></a>
+        <p>Учебный демо-концепт. Это не официальный сайт кафе.</p>
+        <a href="#top" class="back-top">Наверх ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
