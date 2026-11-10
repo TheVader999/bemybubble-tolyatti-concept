@@ -33,6 +33,30 @@ const menu = [
   {n:"Картофель по-деревенски с моцареллой",c:"food",p:270,v:"1 шт.",d:"Подаётся с соусом"},{n:"Тирамису",c:"food",p:330,v:"1 шт."},
   {n:"Капучино",c:"coffee",p:230,v:"300 мл"},{n:"Латте",c:"coffee",p:230,v:"300 мл"},{n:"Американо",c:"coffee",p:160,v:"300 мл"}
 ];
+const menuPhotos={
+  "Матча латте":"p01-latte.png","Какао":"p02-americano.png",
+  "Сливочный орех":"p03-creamy-nut.png","Черничный":"p04-blueberry.png",
+  "БМБ тыква":"p05-pumpkin.png","Кедровый раф":"p06-cedar-raf.png",
+  "Лимонка":"p07-lemonka.png","Малинкис":"p08-raspberry.png",
+  "Пряный апельсин":"p09-spiced-orange.png","Лова-Лова таро":"p10-taro.png",
+  "Баунти":"p11-bounty.png","Банан Нутелла":"p12-banana-nutella.png",
+  "Горячий бамбл кофе":"p01-latte.png","Лимонный капучино":"p02-americano.png",
+  "Ореховый капучино":"p01-latte.png","Черничный капучино":"p02-americano.png",
+  "Вишневый капучино":"p01-latte.png","Горячий шоколад":"p02-americano.png",
+  "Кофейный вайб":"p13-coffee-vibe.png","Карамельная любовь":"p14-caramel-love.png",
+  "Звёздный таро":"p15-star-taro.png","Ча-ча матча":"p16-cha-cha-matcha.png",
+  "Ичиго матча":"p17-ichigo-matcha.png","Грин лемонграсс":"p18-green-lemongrass.png",
+  "Манго стар":"p19-mango-star.png","Умами юдзу":"p20-umami-yuzu.png",
+  "Волга в августе":"p21-volga.png","Барби кор":"p22-barbiecore.png",
+  "Лунный графит":"p23-lunar-graphite.png","Оранжери":"p24-orangerie.png",
+  "Орео краш":"p25-oreo-crush.png","Киндер кантри":"p26-kinder-country.png",
+  "Хот-дог классический":"p27-hotdog-classic.png","Хот-дог песто":"p28-hotdog-pesto.png",
+  "Хот-дог трюфельный":"p29-hotdog-truffle.png",
+  "Картофель по-деревенски с моцареллой":"p30-potato-mozzarella.png",
+  "Тирамису":"p31-tiramisu.png","Капучино":"p02-americano.png",
+  "Латте":"p01-latte.png","Американо":"p02-americano.png",
+  "Манго матча":"p32-mango-matcha.png"
+};
 const titles={hot:"Горячие напитки",drinks:"Безалкогольные напитки",food:"Еда и десерты",coffee:"Кофе"};
 const list=document.querySelector("#menu-list");
 const filters=document.querySelectorAll("[data-filter]");
@@ -45,6 +69,13 @@ function renderMenu(filter="all"){
     const heading=document.createElement("h3");heading.className="menu-category";heading.textContent=titles[category];list.append(heading);
     items.forEach(item=>{
       const card=document.createElement("article");card.className="menu-item";
+      const photo=menuPhotos[item.n];
+      if(photo){
+        card.classList.add("has-photo");
+        const image=document.createElement("img");image.className="menu-item-photo";
+        image.src=`assets/menu/${photo}`;image.alt="";image.loading="lazy";image.decoding="async";
+        card.append(image);
+      }
       const name=document.createElement("h3");name.textContent=item.n;card.append(name);
       if(item.d){const desc=document.createElement("p");desc.textContent=item.d;card.append(desc)}
       const meta=document.createElement("div");meta.className="menu-meta";

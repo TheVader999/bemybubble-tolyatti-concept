@@ -65,3 +65,11 @@ h1 span,.about-title-block h2 span,.photo-copy h2 span{color:var(--lime)}
 .site-footer{background:#21160f;border-color:#604632;color:var(--ink)}.footer-inner p{color:#c1ad98}
 @media(max-width:620px){.menu-backdrop-shade{background:linear-gradient(90deg,#20140fe8,#20140fb8),linear-gradient(0deg,#21160fe8,#21160f58 45%,#21160fd1)}}
 @media(prefers-reduced-motion:reduce){.menu-backdrop-image{transition:none;transform:none}}
+
+/* Фото товара раскрывается только при наведении на карточку. */
+.menu-item.has-photo{position:relative;isolation:isolate;overflow:hidden;transition:padding-right .32s ease,border-color .32s ease,box-shadow .32s ease,transform .32s ease}
+.menu-item-photo{position:absolute;z-index:-1;top:50%;right:14px;width:112px;height:112px;object-fit:contain;background:#362418;border-radius:10px;opacity:0;transform:translate(10px,-50%) scale(.94);transition:opacity .32s ease,transform .42s cubic-bezier(.2,.75,.25,1);pointer-events:none}
+.menu-item.has-photo:hover{padding-right:142px;border-color:#c7ee6380;box-shadow:0 14px 34px #100a0780;transform:translateY(-3px)}
+.menu-item.has-photo:hover .menu-item-photo{opacity:1;transform:translate(0,-50%) scale(1)}
+@media(hover:none){.menu-item.has-photo:active{padding-right:142px}.menu-item.has-photo:active .menu-item-photo{opacity:1;transform:translate(0,-50%) scale(1)}}
+@media(prefers-reduced-motion:reduce){.menu-item.has-photo,.menu-item-photo{transition:none}}
